@@ -1,0 +1,119 @@
+guid: 41c14634-3d46-4959-ba1a-223b043078fa
+worksheet:
+  name: NR WS
+  tables:
+  - name: HUBSPOT_COMPANIES
+    fqn: dc566776-77e0-4d46-9708-de6607baac06
+  table_paths:
+  - id: HUBSPOT_COMPANIES_1
+    table: HUBSPOT_COMPANIES
+    join_path:
+    - {}
+  worksheet_columns:
+  - name: Id
+    column_id: HUBSPOT_COMPANIES_1::ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Industry
+    column_id: HUBSPOT_COMPANIES_1::INDUSTRY
+    properties:
+      column_type: ATTRIBUTE
+  - name: City
+    column_id: HUBSPOT_COMPANIES_1::CITY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Nb of Employees
+    column_id: HUBSPOT_COMPANIES_1::NUMBEROFEMPLOYEES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Num Open Deals
+    column_id: HUBSPOT_COMPANIES_1::HS_NUM_OPEN_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: State
+    column_id: HUBSPOT_COMPANIES_1::STATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Name
+    column_id: HUBSPOT_COMPANIES_1::NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Total Revenue
+    column_id: HUBSPOT_COMPANIES_1::TOTAL_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Created At
+    column_id: HUBSPOT_COMPANIES_1::CREATED_AT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Archived
+    column_id: HUBSPOT_COMPANIES_1::ARCHIVED
+    properties:
+      column_type: ATTRIBUTE
+  - name: Country
+    column_id: HUBSPOT_COMPANIES_1::COUNTRY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Createdate
+    column_id: HUBSPOT_COMPANIES_1::CREATEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Analytics Source
+    column_id: HUBSPOT_COMPANIES_1::HS_ANALYTICS_SOURCE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Zip
+    column_id: HUBSPOT_COMPANIES_1::ZIP
+    properties:
+      column_type: ATTRIBUTE
+  - name: Website
+    column_id: HUBSPOT_COMPANIES_1::WEBSITE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Created At Date
+    column_id: HUBSPOT_COMPANIES_1::CREATED_AT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Created At Time
+    column_id: HUBSPOT_COMPANIES_1::CREATED_AT_TIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Is Target Account
+    column_id: HUBSPOT_COMPANIES_1::HS_IS_TARGET_ACCOUNT
+    properties:
+      column_type: ATTRIBUTE
+  - name: Updated At
+    column_id: HUBSPOT_COMPANIES_1::UPDATED_AT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Analytics Last Visit Date
+    column_id: HUBSPOT_COMPANIES_1::HS_ANALYTICS_LAST_VISIT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Nb Visits
+    column_id: HUBSPOT_COMPANIES_1::HS_ANALYTICS_NUM_VISITS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Lifecyclestage
+    column_id: HUBSPOT_COMPANIES_1::LIFECYCLESTAGE
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
