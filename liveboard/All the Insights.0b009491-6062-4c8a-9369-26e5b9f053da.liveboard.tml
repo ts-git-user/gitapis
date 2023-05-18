@@ -1,0 +1,56 @@
+guid: 0b009491-6062-4c8a-9369-26e5b9f053da
+liveboard:
+  name: All the Insights
+  visualizations:
+  - id: Viz_1
+    viz_guid: f0865a60-2686-405d-9714-8da287b4486d
+    note_tile:
+      html_parsed_string: <p class="theme-module__editor-paragraph" dir="ltr"><span>Simple liveboard - v1</span></p>
+  - id: Viz_2
+    answer:
+      name: Total Nb Visits by State
+      tables:
+      - id: NR WS
+        name: NR WS
+        fqn: 41c14634-3d46-4959-ba1a-223b043078fa
+      search_query: "[Nb Visits] [State] sort by [Nb Visits] descending"
+      answer_columns:
+      - name: Total Nb Visits
+      - name: State
+      table:
+        table_columns:
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Nb Visits
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - State
+        - Total Nb Visits
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: State
+        - column_id: Total Nb Visits
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Nb Visits
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"showLinearRegressionLine\": false,\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Nb Visits\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9913eae3-5751-4958-a5ce-29f99b4e3b47\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Nb Visits\"],\"isOpposite\": false}},{\"id\": \"5f1bbadd-3543-4292-8c1d-807b27b03980\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Nb Visits\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: cec24e37-bdd3-49d1-9a93-59141a1b92cb
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
+    - visualization_id: Viz_2
+      x: 3
+      "y": 0
+      height: 8
+      width: 6
