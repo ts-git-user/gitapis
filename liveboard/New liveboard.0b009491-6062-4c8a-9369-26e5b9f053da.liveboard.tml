@@ -5,7 +5,7 @@ liveboard:
   - id: Viz_1
     viz_guid: f0865a60-2686-405d-9714-8da287b4486d
     note_tile:
-      html_parsed_string: <p class="theme-module__editor-paragraph" dir="ltr"><span>Simple liveboard - v1</span></p>
+      html_parsed_string: <p class="theme-module__editor-paragraph" dir="ltr"><span>Simple liveboard - v2</span></p>
   - id: Viz_2
     answer:
       name: Total Nb Visits by State
@@ -42,10 +42,56 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"showLinearRegressionLine\": false,\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Nb Visits\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9913eae3-5751-4958-a5ce-29f99b4e3b47\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Nb Visits\"],\"isOpposite\": false}},{\"id\": \"5f1bbadd-3543-4292-8c1d-807b27b03980\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Nb Visits\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: cec24e37-bdd3-49d1-9a93-59141a1b92cb
+  - id: Viz_3
+    answer:
+      name: Total Nb Visits by Industry
+      tables:
+      - id: NR WS
+        name: NR WS
+        fqn: 41c14634-3d46-4959-ba1a-223b043078fa
+      search_query: "[Industry] [Nb Visits] sort by [Nb Visits] descending"
+      answer_columns:
+      - name: Industry
+      - name: Total Nb Visits
+      table:
+        table_columns:
+        - column_id: Industry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Nb Visits
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Industry
+        - Total Nb Visits
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Industry
+        - column_id: Total Nb Visits
+        axis_configs:
+        - x:
+          - Industry
+          "y":
+          - Total Nb Visits
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Industry\",\"columnProperty\": {}},{\"columnId\": \"Total Nb Visits\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a7792ba8-183d-44f4-8e89-775a7f6d834d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Nb Visits\"],\"isOpposite\": false}},{\"id\": \"629dc1c9-c5b7-494e-9806-90eea60af6df\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Industry\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Nb Visits\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 897640a3-9079-4a7e-a200-381a6a1d4ae9
   layout:
     tiles:
+    - visualization_id: Viz_2
+      x: 0
+      "y": 1
+      height: 8
+      width: 6
     - visualization_id: Viz_1
       x: 0
       "y": 0
-      height: 4
-      width: 3
+      height: 1
+      width: 12
+    - visualization_id: Viz_3
+      x: 6
+      "y": 1
+      height: 8
+      width: 6
